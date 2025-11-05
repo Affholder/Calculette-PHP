@@ -1,0 +1,113 @@
+:root {
+    --accent-violet: #cc00ff;
+    --dark-bg: #1a1e23;
+    --card-bg: #2a2f36;
+    --text-light: #f0f0f0;
+    --text-dark: #1a1e23;
+    --bordure-violette: #c979a5;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    margin: 0;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    background: linear-gradient(45deg, var(--accent-violet), var(--bordure-violette));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+form {
+    background-color: var(--card-bg);
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--bordure-violette);
+    display: flex;
+    gap: 15px; 
+    align-items: stretch; 
+}
+
+input[type="text"],
+select {
+    padding: 14px;
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    border: 1px solid #444;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+    width: 160px;
+}
+
+input[type="text"]::placeholder {
+    color: #888;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: var(--accent-violet);
+    box-shadow: 0 0 15px var(--bordure-violette);
+    background-color: #222;
+    outline: none;
+}
+
+select {
+    width: 190px;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    padding: 14px 25px;
+    background: linear-gradient(45deg, var(--accent-violet), var(--bordure-violette));
+    color: var(--text-dark);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px var(--bordure-violette);
+}
+
+button[type="submit"]:hover {
+    box-shadow: 0 8px 20px var(--bordure-violette);
+    transform: translateY(-2px);
+}
+
+button[type="submit"]:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px var(--bordure-violette);
+}
+
+h2 {
+    margin-top: 35px;
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    background-color: var(--card-bg);
+    color: var(--accent-violet);
+    border: 1px solid var(--bordure-violette);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.error-message {
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+}
